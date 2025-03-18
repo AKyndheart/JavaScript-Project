@@ -6,10 +6,10 @@ async function movieSearch() {
     const movies = await fetch("http://www.omdbapi.com/?apikey=c5dce6dd&s=fast")
     const moviesData = await movies.json()
 
-    console.log(moviesData)
+    console.log(moviesData.Search)
 
     console.log(
-        moviesData.map(
+        moviesData.Search.map(
             (movie) => `<div class="border">
                         <figure class="landing__figure">
                             <img src="./assets/My_Logo.png" alt="" class="landing__img">
