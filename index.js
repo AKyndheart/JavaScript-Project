@@ -5,29 +5,22 @@
 async function movieSearch() {
     const movies = await fetch("http://www.omdbapi.com/?apikey=c5dce6dd&s=fast")
     const moviesData = await movies.json()
-
+    const borderEl = document.querySelector('.border')
     console.log(moviesData.Search)
 
-    console.log(
-        moviesData.Search.map(
+    borderEl.innerHTML = moviesData.Search.map(
             (movie) => `<div class="border">
-                        <figure class="landing__figure">
-                            <img src="./assets/My_Logo.png" alt="" class="landing__img">
-                        </figure>
-                        <h2 class="landing__title">
-                            Title
-                        </h2>
-                    </div>`
-            )
-        )
+                            <figure class="landing__figure">
+                                <img src="${movie.Poster}" alt="" class="landing__img">
+                            </figure>
+                            <h2 class="landing__title">
+                                ${movie.Title}
+                            </h2>
+                            <h2 class="landing__year">
+                                ${movie.Year}
+                            </h2>
+                        </div>`
+            ).join("")
         }
-    // const movie = `<div class="border">
-    //                     <figure class="landing__figure">
-    //                         <img src="./assets/My_Logo.png" alt="" class="landing__img">
-    //                     </figure>
-    //                     <h2 class="landing__title">
-    //                         Title
-    //                     </h2>
-    //                 </div>`
 
 movieSearch()
