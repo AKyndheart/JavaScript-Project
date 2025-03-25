@@ -9,7 +9,8 @@ async function movieSearch() {
     const moviesData = await movies.json()
     const borderEl = document.querySelector('.border')
     console.log(moviesData.Search)
-    borderEl.innerHTML = moviesData.Search.map((movie) => topMovies(movie)).join("")}
+    borderEl.innerHTML = moviesData.Search.slice(0 , 6).map((movie) => topMovies(movie)).join("")
+}
 
 movieSearch()
 
