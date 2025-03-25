@@ -5,7 +5,7 @@
 
 
 async function movieSearch() {
-    const movies = await fetch("http://www.omdbapi.com/?apikey=c5dce6dd&s=fast")
+    const movies = await fetch("https://www.omdbapi.com/?apikey=c5dce6dd&s=fast")
     const moviesData = await movies.json()
     const borderEl = document.querySelector('.border')
     console.log(moviesData.Search)
