@@ -7,7 +7,7 @@
 async function movieSearch() {
     const movies = await fetch("https://www.omdbapi.com/?apikey=c5dce6dd&s=fast")
     const moviesData = await movies.json()
-    const borderEl = document.querySelector('.border')
+    const borderEl = document.querySelector('.landing__border')
     console.log(moviesData.Search)
     borderEl.innerHTML = moviesData.Search.slice(0 , 6).map((movie) => topMovies(movie)).join("")
 }

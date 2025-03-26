@@ -2,6 +2,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -18,7 +22,7 @@ a {
 .row {
     width: 100%;
     max-width: 1000px;
-    height: 100%;
+    height: 100vh;
 }
 
 h2 {
@@ -29,15 +33,25 @@ h2 {
 /* NAV */
 
 #nav {
-    background-color: rgb(143, 0, 21);
     height: 200px;
     position: relative;
+}
+
+.nav__row {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
 }
 
 .nav__wrapper {
     display: flex;
     justify-content: space-between;
     height: 100%;
+    width: 100%;
+    background-color: rgb(122, 1, 1);
+}
+
+.nav__img {
     width: 100%;
 }
 
@@ -96,33 +110,34 @@ h2 {
 
 /* Landing */
 
-.landing__wrapper {
+ .landing__wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    flex-wrap: wrap;
 }
 
-.movie__wrapper {
+.landing__border {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
+    justify-content: space-between;
+    margin-top: 32px;
 }
 
 .border {
     display: flex;
     flex-direction: column;
-    height: 200px;
     width: calc(3/100%);
-    flex-wrap: wrap;
-    position: relative;
 }
 
 .landing__figure {
     margin: 8px;
     height: 70%;
     width: 100%;
+}
+
+.landing__img {
+    width: 100%;
+    height: 100%;
 }
