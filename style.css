@@ -13,6 +13,7 @@ a {
 
 .container {
     width: 100%;
+    max-width: 2000px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -21,7 +22,7 @@ a {
 
 .row {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     height: 100vh;
 }
 
@@ -39,20 +40,24 @@ h2 {
 
 .nav__row {
     width: 100%;
-    max-width: 1000px;
+    max-width: 2000px;
     height: 100%;
 }
 
 .nav__wrapper {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     height: 100%;
     width: 100%;
-    background-color: rgb(122, 1, 1);
+    position: relative;
 }
 
 .nav__img {
     width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
 }
 
 .nav__links {
@@ -70,8 +75,13 @@ h2 {
     font-weight: 700;
 }
 
+.nav__logo {
+    width: 100px;
+}
+
 .nav__logo--image {
-    width: 60px;
+    width: 100px;
+    border-radius: 999px;
 }
 
 .nav__search--wrapper {
@@ -100,15 +110,26 @@ h2 {
 
 .nav__search--button {
     border-radius: 24px;
-    width: 80px;
-    height: 80%;
-    background-color: rgb(151, 5, 27);
+    width: 70px;
+    height: 70%;
+    background-color: rgb(127, 5, 151);
     position: absolute;
-    top: 10%;
+    top:14%;
     right: 2%;
 }
 
+.nav__search--button:hover {
+    scale: 1.2;
+    transition: all 300ms ease;
+}
+
 /* Landing */
+
+#landing {
+    /* background-color: rgb(45, 2, 85); */
+    height: 100%;
+    width: 100%;
+}
 
  .landing__wrapper {
     display: flex;
@@ -128,16 +149,12 @@ h2 {
 .border {
     display: flex;
     flex-direction: column;
-    width: calc(3/100%);
 }
 
 .landing__figure {
     margin: 8px;
-    height: 70%;
-    width: 100%;
 }
 
 .landing__img {
-    width: 100%;
-    height: 100%;
+    width: calc(3/100%);
 }
