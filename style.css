@@ -14,16 +14,17 @@ a {
 .container {
     width: 100%;
     max-width: 2000px;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .row {
     width: 100%;
     max-width: 1200px;
     height: 100vh;
+    margin: 0 auto;
 }
 
 h2 {
@@ -79,7 +80,10 @@ h2 {
 
 .nav__link:hover {
     text-decoration: underline solid 2px;
-    cursor: pointer;
+}
+
+.cursor {
+    cursor: not-allowed;
 }
 
 .nav__logo {
@@ -135,7 +139,7 @@ h2 {
 /* Landing */
 
 #landing {
-    height: 100%;
+    height: 1000px;
     width: 100%;
 }
 
@@ -149,14 +153,15 @@ h2 {
 .landing__border {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 32px;
+    height: 100%;
 }
 
 .border {
     display: flex;
     flex-direction: column;
-    max-width: 315px;
+    width: calc(100%/3);
 }
 
 .landing__figure {
@@ -164,5 +169,22 @@ h2 {
 }
 
 .landing__img {
-    width: calc(3/100%);
+    height: 350px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(74, 2, 89);
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+}
+
+.footer__copyright {
+    color: white;
 }
