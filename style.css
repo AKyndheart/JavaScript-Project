@@ -23,7 +23,7 @@ a {
 .row {
     width: 100%;
     max-width: 1200px;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
 }
 
@@ -66,6 +66,7 @@ h2 {
     justify-content: space-between;
     list-style: none;
     margin-top: 24px;
+    margin-right: 48px;
 }
 
 .nav__link {
@@ -80,10 +81,6 @@ h2 {
 
 .nav__link:hover {
     text-decoration: underline solid 2px;
-}
-
-.cursor {
-    cursor: not-allowed;
 }
 
 .nav__logo {
@@ -139,8 +136,10 @@ h2 {
 /* Landing */
 
 #landing {
-    height: 1000px;
+    height: 100%;
     width: 100%;
+    margin-bottom: 24px;
+    position: relative;
 }
 
  .landing__wrapper {
@@ -148,6 +147,7 @@ h2 {
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
+
 }
 
 .landing__border {
@@ -187,4 +187,45 @@ footer {
 
 .footer__copyright {
     color: white;
+}
+
+.footer__logo {
+    scale: .7;
+}
+
+/* LANDING OVERLAY */
+
+.landing__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    /* display: none; */
+}
+
+.landing__overlay--message {
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.landing__overlay--para {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.landing__overlay--image {
+    width: 100%;
+}
+
+.landing__overlay--figure {
+    width: 700px;
+}
+
+.no-display {
+    display: none;
 }

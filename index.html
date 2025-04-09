@@ -18,12 +18,9 @@
                     </figure>
                     <ul class="nav__links">
                         <li class="nav__link">
-                            <a href="#" class="nav__home cursor">Home</a>                            </li>
+                            <a href="#" class="nav__home cursor" onclick="refresh(event)">Home</a>                            </li>
                         <li class="nav__link">
-                            <a href="#" class="nav__about cursor">About</a>
-                        </li>
-                        <li class="nav__link">
-                            <a href="#" class="nav__contact cursor">Contact</a>
+                            <a href="https://www.imdb.com/" target="_blank" class="nav__about cursor">IMDb</a>
                         </li>
                     </ul>
                     <img src="./assets/Movie-Banner.jpg" alt="" class="nav__img">
@@ -44,7 +41,18 @@
     </div>
     <div id="landing">
         <div class="container">
-            <div class="landing__row">
+            <div class="row">
+                <div class="landing__overlay">
+                    <h1 class="landing__overlay--message">
+                        Welcome to Top 6 Movies, discover your next movie adventure here!
+                    </h1>
+                    <p class="landing__overlay--para">
+                        Search for movies by title with the quick and easy Top 6 Movies search bar.
+                    </p>
+                    <figure class="landing__overlay--figure">
+                        <img src="./assets/Overlay.jpg" alt="" class="landing__overlay--image">
+                    </figure>
+                </div>
                 <div class="landing__wrapper">
                     <div class="landing__border"></div>
                 </div>
@@ -65,12 +73,16 @@
                 </h3>
                 <ul class="nav__links">
                     <li class="nav__link">
-                        <a href="#" class="nav__home cursor">Home</a>                            </li>
-                    <li class="nav__link">
-                        <a href="#" class="nav__about cursor">About</a>
+                        <a href="#" class="nav__home cursor">Go to Top</a>
                     </li>
                     <li class="nav__link">
-                        <a href="#" class="nav__contact cursor">Contact</a>
+                        <a href="https://www.amazon.com/gp/video/storefront/?contentType=movie&contentId=home&ref=dvm_us_dl_sl_go_mf_mfcont_mkw_sTmnm3C9p-dc_pgrid_164423751574&mrntrk=pcrid_708489000437_slid__pgeo_9011698_x__adext__ptid_kwd-116712757" target="_blank" class="nav__about cursor">Amazon</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="https://tubitv.com/?start=true&utm_source=home_null_broad_legacy_null_stream-tv-baseline&utm_medium=adwords_cpc&utm_campaign=null-null-us_nb_variable_search_desktop_google_null_biddable_en_generalstreaming&gad_source=1&gclid=CjwKCAjwtdi_BhACEiwA97y8BAOw4mFJCyX0lAEnD9lE-IGFCPpchgtyl0E-tpuqa1WfLtKUJt9V-hoCmnwQAvD_BwE" target="_blank" class="nav__contact cursor">Tubi</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="https://www.netflix.com/" target="_blank" class="nav__home cursor">Netflix</a>
                     </li>
                 </ul>
             </div>

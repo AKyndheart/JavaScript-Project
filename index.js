@@ -34,6 +34,12 @@ movieSearch()
             const moviesData = await movies.json()
             const borderEl = document.querySelector('.landing__border')
             borderEl.innerHTML = moviesData.Search.slice(0 , 6).map((movie) => topMovies(movie)).join("")
+            const overlay = document.querySelector('.landing__overlay')
+            overlay.classList.add('no-display')
         }
 
         onSearchChange(event)
+
+        function refresh (event) {
+            location.reload()
+        }
