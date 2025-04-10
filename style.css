@@ -37,6 +37,8 @@ h2 {
 #nav {
     height: 200px;
     position: relative;
+    background-color: grey;
+    z-index: ;
 }
 
 .nav__row {
@@ -58,7 +60,7 @@ h2 {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
 }
 
 .nav__links {
@@ -67,6 +69,7 @@ h2 {
     list-style: none;
     margin-top: 24px;
     margin-right: 48px;
+    z-index: 1;
 }
 
 .nav__link {
@@ -85,6 +88,7 @@ h2 {
 
 .nav__logo {
     width: 100px;
+    z-index: 1;
 }
 
 .nav__logo--image {
@@ -102,6 +106,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .nav__search {
@@ -112,6 +117,7 @@ h2 {
     font-weight: 700;
     text-align: left;
     padding-left: 16px;
+    z-index: 1;
 }
 
 .nav__search--bar {
@@ -138,8 +144,9 @@ h2 {
 #landing {
     height: 100%;
     width: 100%;
-    margin-bottom: 24px;
+    padding-bottom: 24px;
     position: relative;
+    background-color: grey;
 }
 
  .landing__wrapper {
@@ -205,12 +212,14 @@ footer {
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    /* display: none; */
+    background-color: gray;
 }
 
 .landing__overlay--message {
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     font-size: 32px;
+    color: rgb(7, 29, 173);
 }
 
 .landing__overlay--para {
