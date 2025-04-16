@@ -196,15 +196,22 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .footer__copyright {
     color: white;
+    margin: 18px 24px;
 }
 
 .footer__logo {
     scale: .7;
+    margin: 18px 24px;
+}
+
+.nav__links {
+    margin: 18px 24px;
 }
 
 /* LANDING OVERLAY */
@@ -276,4 +283,118 @@ footer {
 
 .no-display {
     display: none;
+}
+
+.display {
+    display: block;
+}
+
+/* Media */
+
+@media (max-width: 1200px){
+    .landing__overlay--decoration-1 {
+        left: 80%;
+    }
+
+    .landing__overlay--decoration-2 {
+        right: 80%;
+    }
+
+    .landing__overlay--figure {
+        width: 500px;
+    }
+}
+
+@media (max-width: 1020px){
+    .landing__overlay--message {
+        font-size: 24px;
+    }
+
+    .landing__overlay--para {
+        font-size: 18px;
+    }
+
+    .nav__link {
+        font-size: 14px;
+    }
+
+    .footer__copyright {
+        font-size: 14px;
+    }
+
+    .footer__logo {
+        scale: .5;
+    }
+}
+
+@media (max-width:768px){
+    .landing__overlay--message {
+        font-size: 18px;
+    }
+
+    .landing__overlay--para {
+        font-size: 14px;
+    }
+
+    .landing__overlay--decoration-1 {
+        width: 50px;
+        top: 50%;
+    }
+
+    .landing__overlay--decoration-2 {
+       width: 50px;
+       top: 30%;
+    }
+
+    .nav__search {
+        width: 300px;
+    }
+    
+    .nav__logo--image {
+        scale: .7;
+    }
+
+    .border {
+        width: calc(100%/2);
+    }
+
+    .footer__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:480px) {
+    .nav__search {
+        width: 100px;
+    }
+
+    .nav__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav__logo--image {
+        scale: .5;
+    }
+
+    .nav__search--title {
+        font-size: 24px;
+    }
+
+    .border {
+        width: 100%;
+        align-items: center;
+    }
+
+    .landing__overlay--decoration-1 {
+        width: 50px;
+        top: 10%;
+    }
+
+    .landing__overlay--decoration-2 {
+       width: 50px;
+       top: 5%;
+    }
 }
