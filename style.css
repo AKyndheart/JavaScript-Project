@@ -37,8 +37,7 @@ h2 {
 #nav {
     height: 200px;
     position: relative;
-    background-color: grey;
-    z-index: ;
+    background-color: rgb(33, 33, 33);
 }
 
 .nav__row {
@@ -146,7 +145,7 @@ h2 {
     width: 100%;
     padding-bottom: 24px;
     position: relative;
-    background-color: grey;
+    background-color: rgb(33, 33, 33);
 }
 
  .landing__wrapper {
@@ -177,6 +176,14 @@ h2 {
 
 .landing__img {
     height: 350px;
+}
+
+.landing__title {
+    color: white;
+}
+
+.landing__year {
+    color: white;
 }
 
 /* FOOTER */
@@ -212,19 +219,20 @@ footer {
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    background-color: gray;
+    background-color: rgb(33, 33, 33);
 }
 
 .landing__overlay--message {
     font-family: "Lato", sans-serif;
     font-weight: 900;
     font-size: 32px;
-    color: rgb(7, 29, 173);
+    color: white;
 }
 
 .landing__overlay--para {
     font-weight: 500;
     font-size: 24px;
+    color: white;
 }
 
 .landing__overlay--image {
@@ -233,6 +241,37 @@ footer {
 
 .landing__overlay--figure {
     width: 700px;
+}
+
+.landing__overlay--decoration-1 {
+    position: absolute;
+    top: 40%;
+    left: 90%;
+    width: 100px;
+}
+
+.landing__overlay--decoration-2 {
+    position: absolute;
+    top: 20%;
+    right: 90%;
+    width: 100px;
+}
+
+.landing__overlay--decoration-img {
+    width: 100%;
+    animation: animate-image 1000ms infinite;
+}
+
+@keyframes animate-image {
+    0% {
+        rotate: -30deg;
+    }
+    50% {
+        rotate: 30deg;
+    }
+    100% {
+        rotate: -30deg;
+    }
 }
 
 .no-display {
