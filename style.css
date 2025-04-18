@@ -266,7 +266,7 @@ footer {
 
 .landing__overlay--decoration-img {
     width: 100%;
-    animation: animate-image 1000ms infinite;
+    animation: animate-image 1200ms infinite;
 }
 
 @keyframes animate-image {
@@ -390,11 +390,13 @@ footer {
 
     .landing__overlay--decoration-1 {
         width: 50px;
-        top: 10%;
+        top: 30%;
+        left: 70%;
     }
 
     .landing__overlay--decoration-2 {
        width: 50px;
-       top: 5%;
+       top: 20%;
+       right: 70%;
     }
 }
