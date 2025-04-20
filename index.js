@@ -27,14 +27,12 @@ movieSearch()
                     </div>`
         }
 
-        // moviesData.slice(0 , 6)
-
         async function onSearchChange(event) {
             const id = (event.target.value)
             const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=${id}`)
             const moviesData = await movies.json()
             const borderEl = document.querySelector('.landing__border')
-            // console.log(moviesData.Search)
+            console.log(moviesData.Search)
             if (moviesData.Search !== undefined){
                 const slicer = moviesData.Search.slice(0, 6)
                 borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
@@ -45,6 +43,11 @@ movieSearch()
                 console.log("Please imput valid search")
                 const overlay = document.querySelector('.landing__overlay')
                 overlay.classList.add('top__page')
+                const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=`)
+                const moviesData = await movies.json()
+                const borderEl = document.querySelector('.landing__border')
+                const slicer = moviesData.Search.slice(0, 6)
+                borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
             }
         }
 
