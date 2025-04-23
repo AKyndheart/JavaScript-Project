@@ -41,13 +41,13 @@ movieSearch()
             }
             else{
                 console.log("Please imput valid search")
-                const overlay = document.querySelector('.landing__overlay')
-                overlay.classList.add('top__page')
-                const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=`)
-                const moviesData = await movies.json()
-                const borderEl = document.querySelector('.landing__border')
-                const slicer = moviesData.Search.slice(0, 6)
-                borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
+                // const overlay = document.querySelector('.landing__overlay')
+                // overlay.classList.add('top__page')
+                // const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=`)
+                // const moviesData = await movies.json()
+                // const borderEl = document.querySelector('.landing__border')
+                // const slicer = moviesData.Search.slice(0, 6)
+                // borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
             }
         }
 
@@ -57,3 +57,22 @@ movieSearch()
         function refresh (event) {
             location.reload()
         }
+
+        async function filterTitle(event) {
+            const id = (event.target.value)
+            const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=${id}`)
+            const moviesData = await movies.json()
+            const borderEl = document.querySelector('.landing__border')
+            console.log(moviesData.Search)
+            movieArray = moviesData.Search
+            console.log(movieArray)
+            const filter = movieArray.sort()
+            console.log(filter)
+            const slicer = moviesData.Search.slice(0, 6)
+            borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
+        }
+
+        async function filterYear(event) {
+
+        }
+
