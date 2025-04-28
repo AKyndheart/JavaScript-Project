@@ -28,9 +28,12 @@ movieSearch()
         }
 
         async function onSearchChange(event) {
+            // console.log(event)
             const id = (event.target.value)
             const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=${id}`)
+            // console.log(movies)
             const moviesData = await movies.json()
+            // console.log(moviesData)
             const borderEl = document.querySelector('.landing__border')
             console.log(moviesData.Search)
             if (moviesData.Search !== undefined){

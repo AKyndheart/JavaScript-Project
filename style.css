@@ -160,6 +160,7 @@ h2 {
     width: 100px;
     height: 50px;
     cursor: pointer;
+    transition: all 800ms ease;
 }
 
 .dropdown__btn {
@@ -167,7 +168,7 @@ h2 {
     height: 100%;
     cursor: pointer;
     border: none;
-    background-color: purple;
+    background-color: rgb(94, 5, 94);
 }
 
 .dropdown:hover .dropdown__content {
@@ -179,12 +180,18 @@ h2 {
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    height: 70px;
 }
 
 .dropdown__item {
-    margin: 8px;
-    border: none;
+    border: 2px solid rgb(0, 0, 0);
     cursor: pointer;
+    height: 50%;
+    background-color: rgb(94, 5, 94);
+}
+
+.dropdown__item:hover {
+    background-color: grey;
 }
 
 .landing__border {
