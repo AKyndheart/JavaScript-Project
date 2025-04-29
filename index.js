@@ -28,14 +28,13 @@ movieSearch()
         }
 
         async function onSearchChange(event) {
-            // console.log(event)
             const id = (event.target.value)
             const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=${id}`)
-            // console.log(movies)
             const moviesData = await movies.json()
-            // console.log(moviesData)
+            console.log(moviesData)
             const borderEl = document.querySelector('.landing__border')
-            console.log(moviesData.Search)
+            const searchedMovies = moviesData.Search
+            console.log(searchedMovies)
             if (moviesData.Search !== undefined){
                 const slicer = moviesData.Search.slice(0, 6)
                 borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
@@ -44,13 +43,6 @@ movieSearch()
             }
             else{
                 console.log("Please imput valid search")
-                // const overlay = document.querySelector('.landing__overlay')
-                // overlay.classList.add('top__page')
-                // const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=`)
-                // const moviesData = await movies.json()
-                // const borderEl = document.querySelector('.landing__border')
-                // const slicer = moviesData.Search.slice(0, 6)
-                // borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
             }
         }
 
@@ -63,19 +55,21 @@ movieSearch()
 
         async function filterTitle(event) {
             const id = (event.target.value)
+            console.log(id)
             const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=${id}`)
             const moviesData = await movies.json()
+            console.log(moviesData)
             const borderEl = document.querySelector('.landing__border')
-            console.log(moviesData.Search)
-            movieArray = moviesData.Search
-            console.log(movieArray)
-            const filter = movieArray.sort()
-            console.log(filter)
-            const slicer = moviesData.Search.slice(0, 6)
-            borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
+            const searchedMovies = moviesData.Search
+            console.log(searchedMovies)
+            // const filter = searchedMovies.sort()
+            // console.log(filter)
+            // const slicer = moviesData.Search.slice(0, 6)
+            // borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
+            // filterT = slicer.Sort()
+            // console.log(filterT)
         }
 
         async function filterYear(event) {
 
         }
-
