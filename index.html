@@ -6,6 +6,7 @@
     <title>Top 6 Movies</title>
     <link rel="stylesheet" href="./style.css">
     <script defer src="./index.js"></script>
+    <script defer src="./movies.js"></script>
     <script src="https://kit.fontawesome.com/b1537981f4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +67,7 @@
                     <div class="dropdown">
                         <button class="dropdown__btn">Sort By...</button>
                         <div class="dropdown__content">
-                            <button class="dropdown__item" onclick="filterTitle(event)">Title</button>
+                            <button class="dropdown__item" onclick="filterTitle(event)" ondblclick="main(event)">Title</button>
                             <button class="dropdown__item" onclick="filterYear(event)">Year</button>
                         </div>
                     </div>
