@@ -39,6 +39,7 @@ movieSearch()
             if (moviesData.Search !== undefined){
                 const slicer = moviesData.Search.slice(0, 6)
                 console.log(slicer)
+                localStorage.setItem("slicer" , JSON.stringify(slicer))
                 borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
                 const overlay = document.querySelector('.landing__overlay')
                 overlay.classList.add('no-display')
@@ -49,15 +50,13 @@ movieSearch()
 
         }
 
-        const searchImput = document.querySelector(".nav__search")
-        searchImput.addEventListener("imput",onSearchChange)
-
         function refresh (event) {
             location.reload()
         }
 
         function filterTitle(event) {
 
+            var slicer = localStorage.getItem("slicer" , slicer)
             console.log("sort by title")
             console.log(slicer)
 
