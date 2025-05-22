@@ -57,9 +57,23 @@ movieSearch()
         function filterTitle(event) {
 
             var slicer = localStorage.getItem("slicer" , slicer)
+            var id = localStorage.getItem("id", id)
             console.log("sort by title")
             console.log(slicer)
+            console.log(id)
 
+            async function onFilterChange(event){
+                const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=${id}`)
+                const moviesData = await movies.json()
+                console.log(moviesData)
+                console.log(moviesData.Search)
+                const slicer = moviesData.Search.slice(0, 6)
+                console.log(slicer)
+                const sorter = slicer.sort((a, b) => a.Title.localeCompare(b.title))
+                console.log(sorter)
+            }
+
+            return onFilterChange(event)
         }
 
         function filterYear(event) {
