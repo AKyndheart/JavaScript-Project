@@ -58,8 +58,8 @@ movieSearch()
 
             var slicer = localStorage.getItem("slicer" , slicer)
             var id = localStorage.getItem("id", id)
+            const borderEl = document.querySelector('.landing__border')
             console.log("sort by title")
-            console.log(slicer)
             console.log(id)
 
             async function onFilterChange(event){
@@ -69,15 +69,46 @@ movieSearch()
                 console.log(moviesData.Search)
                 const slicer = moviesData.Search.slice(0, 6)
                 console.log(slicer)
-                const sorter = slicer.sort((a, b) => a.Title.localeCompare(b.title))
+                const sorter = slicer.sort((a, b) => {
+                    if (a.Title < b.Title){
+                        return -1
+                    }
+                    return 0
+                })
                 console.log(sorter)
+
+                borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
             }
 
             return onFilterChange(event)
         }
 
         function filterYear(event) {
+                        var slicer = localStorage.getItem("slicer" , slicer)
+            var id = localStorage.getItem("id", id)
+            const borderEl = document.querySelector('.landing__border')
+            console.log("sort by title")
+            console.log(id)
 
+            async function onFilterChange(event){
+                const movies = await fetch(`https://www.omdbapi.com/?apikey=c5dce6dd&s=${id}`)
+                const moviesData = await movies.json()
+                console.log(moviesData)
+                console.log(moviesData.Search)
+                const slicer = moviesData.Search.slice(0, 6)
+                console.log(slicer)
+                const sorter = slicer.sort((a, b) => {
+                    if (a.Year < b.Year){
+                        return -1
+                    }
+                    return 0
+                })
+                console.log(sorter)
+
+                borderEl.innerHTML = slicer.map((movie) => topMovies(movie)).join("")
+            }
+
+            return onFilterChange(event)
         }
 
 
